@@ -10,6 +10,49 @@
 </head>
 <body>
    <div id="header"></div>
-   <a class="btn btn-primary" href="./newRoute.html">Añadir nueva ruta</a>
+    
+    <div class="navbar bg-base-500">
+        <a class="btn btn-ghost text-xl" href="./" >Soon</a>
+    </div>
+
+    <div id="header"></div>
+    <a class="btn btn-primary" href="./newRoute.html">Añadir nueva ruta</a>
+
+    <div class="relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
+        <div class="w-full">
+            <div class="text-center">
+                <h1 class="text-3xl font-semibold text-gray-900">Rutas Existentes</h1>
+            </div>
+            <div class="mt-5" id="routeList">
+                <!-- Lista de rutas se llenará aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://soon-api.azurewebsites.net/api/Routes')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const routeList = document.getElementById('routeList');
+                    data.forEach(route => {
+                        const routeItem = document.createElement('div');
+                        routeItem.className = 'py-2';
+                        routeItem.textContent = route.name;
+                        routeList.appendChild(routeItem);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    const routeList = document.getElementById('routeList');
+                    routeList.textContent = 'Error al cargar las rutas.';
+                });
+        });
+    </script>
 </body>
 </html>
