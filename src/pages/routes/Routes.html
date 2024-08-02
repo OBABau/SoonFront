@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/main.js" type="module"></script>
+    <!-- <script src="js/main.js" type="module"></script> -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../../dist/output.css" rel="stylesheet">
 </head>
 <body>
    <div id="header"></div>
     
     <div class="navbar bg-base-500">
-        <a class="btn btn-ghost text-xl" href="./" >Soon</a>
+        <a class="btn btn-ghost text-xl" href="../../" >Soon</a>
     </div>
 
     <div id="header"></div>
@@ -40,7 +40,9 @@
                 })
                 .then(data => {
                     const routeList = document.getElementById('routeList');
-                    data.forEach(route => {
+                    
+                    
+                    data.routess.forEach(route => {
                         const routeItem = document.createElement('div');
                         routeItem.className = 'py-2';
                         routeItem.textContent = route.name;

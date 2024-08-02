@@ -8,6 +8,7 @@ export async function loadComponent(options) {
     const baseUrl = currentLocation.endsWith('/') ? currentLocation : currentLocation.substring(0, currentLocation.lastIndexOf('/') + 1);
 
     const componentUrl = baseUrl + options.url + '/' + fileName;
+    
 
     // Construye las URLs del componente y de la petición
     const now = new Date();
@@ -15,7 +16,8 @@ export async function loadComponent(options) {
     const moduleUrl = `${componentUrl}.js`;
 
     // Obtén e inserta el componente HTML
-    console.log('Cargando Componente ' + requestUrl);
+    console.log('Viendo el component ' + componentUrl);
+    
     return await fetch(requestUrl, {
         headers: {
             'pragma': 'no-cache',
