@@ -1,10 +1,22 @@
 import { settings } from './settings.js';
 import { loadComponent } from './providers/components.js';
 
-//event handler
+// Variables
+var sideMenuVisible = true;
+
+// Getters and setters
+export function getSideMenuVisible() {
+    return sideMenuVisible;
+}
+
+export function toggleSideMenuVisible() {
+    sideMenuVisible = !sideMenuVisible;
+}
+
+// Event handler
 window.addEventListener('load', load);
 
-//load document
+// Load document
 function load(){
     console.log('Loading Main...');
 
