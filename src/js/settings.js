@@ -11,15 +11,7 @@ export var settings = {
             },
             {
                 parent: 'content',
-                url: 'components/home'
-            },
-            {
-                parent: 'content',
                 url: 'components/dashboard'
-            },
-            {
-                parent: 'content',
-                url: 'components/settings'
             },
             {
                 parent: 'footer',

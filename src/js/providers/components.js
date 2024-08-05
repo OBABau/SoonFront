@@ -33,10 +33,10 @@ export async function loadComponent(options) {
 // Función para importar el módulo JavaScript
 async function importModule(moduleUrl) {
     console.log('Importando Módulo ' + moduleUrl);
-    try {        
+    // try {        
         let { init } = await import(moduleUrl);
         init();
-    } catch (error) {
-        console.error("No se ha podido importar el modulo: " + moduleUrl);
-    }
+    // } catch (error) {
+    //     console.error("No se ha podido importar el modulo: " + moduleUrl);
+    // }
 }
