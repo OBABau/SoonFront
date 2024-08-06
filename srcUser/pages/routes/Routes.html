@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cmyk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="js/main.js" type="module"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../dist/output.css" rel="stylesheet">
+</head>
+<body>
+   <div id="header"></div>
+    
+    <div class="navbar bg-base-500">
+        <a class="btn btn-ghost text-xl" href="../../" >Soon</a>
+    </div>
+
+    <div id="header"></div>
+    <a class="btn btn-primary" href="./newRoute.html">Añadir nueva ruta</a>
+
+    <div class="relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
+        <div class="w-full">
+            <div class="text-center">
+                <h1 class="text-3xl font-semibold text-gray-900">Rutas Existentes</h1>
+            </div>
+            <div class="mt-5" id="routeList">
+                <!-- Lista de rutas se llenará aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://soon-api.azurewebsites.net/api/Routes')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const routeList = document.getElementById('routeList');
+                    
+                    
+                    data.routess.forEach(route => {
+                        const routeItem = document.createElement('div');
+                        routeItem.className = 'py-2';
+                        routeItem.textContent = route.name;
+                        routeList.appendChild(routeItem);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    const routeList = document.getElementById('routeList');
+                    routeList.textContent = 'Error al cargar las rutas.';
+                });
+        });
+    </script>
+</body>
+</html>

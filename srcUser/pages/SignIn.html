@@ -47,9 +47,6 @@
 
 <script>
     document.getElementById('loginForm').addEventListener('submit', async function(event) {
-
-            
-
         event.preventDefault();
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
@@ -68,38 +65,8 @@
 
         const result = await response.json()
         if (result.status == 0) {
-            const emailToCompare = email;
-            const passwordToCompare = password;
-
-            fetch('https://soon-api.azurewebsites.net/api/User')
-            .then(response => {
-                if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-                }
-                return response.json();
-            })
-            .then(data => {
-                const users = data.users;
-                const user = users.find(user => user.email === emailToCompare && user.password === passwordToCompare);
-
-                if (user) {
-                    if(user.userType === 3)
-                    {
-                        alert(`Login usuario`);
-                        window.location.href = "../../srcUser/"; 
-                    }else
-                    {
-                        alert('Login admin');
-                        window.location.href = "../";
-                    }
-                } else {
-                console.log('No user found with the provided email and password.');
-                }
-            })
-            .catch(error => {
-                console.error('There has been a problem with your fetch operation:', error);
-            });
-
+            alert(`Login exitoso`);
+            window.location.href = "../";  // Redirigir a la página de inicio de sesión
         } else {
             alert('Error: No se ha podido hacer el login');
         }

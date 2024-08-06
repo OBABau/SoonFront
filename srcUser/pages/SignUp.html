@@ -1,0 +1,81 @@
+<html lang="en" data-theme="cmyk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+   
+    <div class="navbar bg-base-500">
+        <a class="btn btn-ghost text-xl" href="../../" >Soon</a>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
+        <div class="w-full">
+            <div class="text-center">
+                <h1 class="text-3xl font-semibold text-gray-900">Registrate</h1>
+                <p class="mt-2 text-gray-500">Ingresa tus datos para crear una cuenta</p>
+            </div>
+            <div class="mt-5">
+                <form id="registrationForm">
+                    <div class="relative mt-6">
+                        <input type="email" name="email" id="email" placeholder="Email Address" class="peer bg-white text-black mt-1 w-full border-b-2 border-gray-300 px-0 py-1 placeholder:text-transparent focus:border-gray-500 focus:outline-none" autocomplete="NA" />
+                        <label for="email" class="pointer-events-none absolute top-0 left-0 origin-left -translate-y-1/2 transform text-sm text-gray-800 opacity-75 transition-all duration-100 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:pl-0 peer-focus:text-sm peer-focus:text-gray-800">Correo Electronico</label>
+                    </div>
+                    <div class="relative mt-6">
+                        <input type="password" name="password" id="password" placeholder="Password" class="peer peer bg-white text-black mt-1 w-full border-b-2 border-gray-300 px-0 py-1 placeholder:text-transparent focus:border-gray-500 focus:outline-none" />
+                        <label for="password" class="pointer-events-none absolute top-0 left-0 origin-left -translate-y-1/2 transform text-sm text-gray-800 opacity-75 transition-all duration-100 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:pl-0 peer-focus:text-sm peer-focus:text-gray-800">Contraseña</label>
+                    </div>
+                    <div class="relative mt-6">
+                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" class="peer peer bg-white text-black mt-1 w-full border-b-2 border-gray-300 px-0 py-1 placeholder:text-transparent focus:border-gray-500 focus:outline-none" />
+                        <label for="confirmPassword" class="pointer-events-none absolute top-0 left-0 origin-left -translate-y-1/2 transform text-sm text-gray-800 opacity-75 transition-all duration-100 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:pl-0 peer-focus:text-sm peer-focus:text-gray-800">Confirmar contraseña</label>
+                    </div>
+                    <div class="my-6">
+                        <button type="submit" class="w-full rounded-md bg-black px-3 py-4 text-white focus:bg-gray-600 focus:outline-none">Registrate</button>
+                    </div>
+                    <p class="text-center text-sm text-gray-500">¿Ya tienes una cuenta?
+                        <a href="./SignIn.html" class="font-semibold text-gray-600 hover:underline focus:text-gray-800 focus:outline-none">Inicia sesion</a>.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert("Las contraseñas no coinciden");
+                return;
+            }
+
+            const params = new URLSearchParams();
+            params.append('email', email);
+            params.append('password', password);
+            params.append('type', "3");
+
+            const response = await fetch('https://soon-api.azurewebsites.net/api/user', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: params.toString(),
+            });
+
+            const result = await response.json()
+            if (response.ok) {
+                alert(`Registro exitoso`);
+                window.location.href = './SignIn.html';  // Redirigir a la página de inicio de sesión
+            } else {
+                alert('Error: ');
+            }
+        });
+    </script>
+</body>
+</html>
