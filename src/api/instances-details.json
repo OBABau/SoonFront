@@ -1,0 +1,258 @@
+[
+    {
+        "InstanceId": "Zona Rio",
+        "Details": [
+            {
+                "timestamp": 1691085600000, 
+                "networkIn": 41.07,
+                "networkOut": 24.01,
+                "readOpt": 16.63,
+                "writeOpt": 55.45,
+                "cpuUtilization": 36.77
+            },
+            {
+                "timestamp": 1691092800000, 
+                "networkIn": 52.28,
+                "networkOut": 10.48,
+                "readOpt": 6.63,
+                "writeOpt": 15.82,
+                "cpuUtilization": 90.35
+            },
+            {
+                "timestamp": 1691100000000, 
+                "networkIn": 44.3,
+                "networkOut": 4.81,
+                "readOpt": 22.31,
+                "writeOpt": 61.97,
+                "cpuUtilization": 98
+            },
+            {
+                "timestamp": 1691107200000, 
+                "networkIn": 8.97,
+                "networkOut": 45.49,
+                "readOpt": 85.46,
+                "writeOpt": 89.62,
+                "cpuUtilization": 28.25
+            },
+            {
+                "timestamp": 1691114400000, 
+                "networkIn": 90.32,
+                "networkOut": 46.41,
+                "readOpt": 43.07,
+                "writeOpt": 26.53,
+                "cpuUtilization": 20.24
+            },
+            {
+                "timestamp": 1691121600000, 
+                "networkIn": 76.65,
+                "networkOut": 95.86,
+                "readOpt": 44.03,
+                "writeOpt": 53.03,
+                "cpuUtilization": 14.4
+            },
+            {
+                "timestamp": 1691128800000, 
+                "networkIn": 45.57,
+                "networkOut": 31.6,
+                "readOpt": 68.76,
+                "writeOpt": 55.83,
+                "cpuUtilization": 8.63
+            },
+            {
+                "timestamp": 1691136000000, 
+                "networkIn": 37.43,
+                "networkOut": 22.13,
+                "readOpt": 75.46,
+                "writeOpt": 63.09,
+                "cpuUtilization": 14.04
+            },
+            {
+                "timestamp": 1691143200000, 
+                "networkIn": 24.55,
+                "networkOut": 95.33,
+                "readOpt": 95.31,
+                "writeOpt": 74.64,
+                "cpuUtilization": 72.95
+            },
+            {
+                "timestamp": 1691150400000, 
+                "networkIn": 82.18,
+                "networkOut": 3.15,
+                "readOpt": 40.16,
+                "writeOpt": 48.37,
+                "cpuUtilization": 32.33
+            }
+        ]
+    },
+    
+    {
+        "InstanceId": "2000",
+        "Details": [
+            {
+                "timestamp": 1722914288000,
+                "networkIn": 81.29,
+                "networkOut": 94.87,
+                "readOpt": 59.31,
+                "writeOpt": 45.86,
+                "cpuUtilization": 81.62
+            },
+            {
+                "timestamp": 1722914289000,
+                "networkIn": 69.92,
+                "networkOut": 9.57,
+                "readOpt": 25.4,
+                "writeOpt": 29.15,
+                "cpuUtilization": 58.74
+            },
+            {
+                "timestamp": 1722914290000,
+                "networkIn": 76.84,
+                "networkOut": 45.11,
+                "readOpt": 90.11,
+                "writeOpt": 78.25,
+                "cpuUtilization": 3.51
+            },
+            {
+                "timestamp": 1722914291000,
+                "networkIn": 11.19,
+                "networkOut": 83.28,
+                "readOpt": 64.3,
+                "writeOpt": 14.08,
+                "cpuUtilization": 12.62
+            },
+            {
+                "timestamp": 1722914292000,
+                "networkIn": 40.59,
+                "networkOut": 39.73,
+                "readOpt": 81.45,
+                "writeOpt": 68.37,
+                "cpuUtilization": 21.18
+            },
+            {
+                "timestamp": 1722914293000,
+                "networkIn": 83.96,
+                "networkOut": 0.12,
+                "readOpt": 52.56,
+                "writeOpt": 96.63,
+                "cpuUtilization": 32.1
+            },
+            {
+                "timestamp": 1722914294000,
+                "networkIn": 14.9,
+                "networkOut": 67.31,
+                "readOpt": 35.43,
+                "writeOpt": 48.66,
+                "cpuUtilization": 19.52
+            },
+            {
+                "timestamp": 1722914295000,
+                "networkIn": 80.84,
+                "networkOut": 45.06,
+                "readOpt": 98.21,
+                "writeOpt": 38.51,
+                "cpuUtilization": 63.1
+            },
+            {
+                "timestamp": 1722914296000,
+                "networkIn": 38.06,
+                "networkOut": 11.59,
+                "readOpt": 38.21,
+                "writeOpt": 66.81,
+                "cpuUtilization": 67.67
+            },
+            {
+                "timestamp": 1722914297000,
+                "networkIn": 17.61,
+                "networkOut": 76.18,
+                "readOpt": 22.12,
+                "writeOpt": 36.72,
+                "cpuUtilization": 56.66
+            }
+        ]
+    },
+    {
+        "InstanceId": "Insurgentes",
+        "Details": [
+            {
+                "timestamp": 1722914288000,
+                "networkIn": 30.67,
+                "networkOut": 73.52,
+                "readOpt": 68.46,
+                "writeOpt": 30.45,
+                "cpuUtilization": 95.48
+            },
+            {
+                "timestamp": 1722914289000,
+                "networkIn": 2.66,
+                "networkOut": 28.81,
+                "readOpt": 45.67,
+                "writeOpt": 16.34,
+                "cpuUtilization": 5.65
+            },
+            {
+                "timestamp": 1722914290000,
+                "networkIn": 86.38,
+                "networkOut": 42.85,
+                "readOpt": 64.94,
+                "writeOpt": 40.02,
+                "cpuUtilization": 71.36
+            },
+            {
+                "timestamp": 1722914291000,
+                "networkIn": 77.35,
+                "networkOut": 26.18,
+                "readOpt": 8.48,
+                "writeOpt": 19.83,
+                "cpuUtilization": 32.66
+            },
+            {
+                "timestamp": 1722914292000,
+                "networkIn": 35.24,
+                "networkOut": 27.25,
+                "readOpt": 13,
+                "writeOpt": 43.47,
+                "cpuUtilization": 89.82
+            },
+            {
+                "timestamp": 1722914293000,
+                "networkIn": 95.21,
+                "networkOut": 49.29,
+                "readOpt": 90.28,
+                "writeOpt": 73.52,
+                "cpuUtilization": 25.27
+            },
+            {
+                "timestamp": 1722914294000,
+                "networkIn": 45.44,
+                "networkOut": 88.29,
+                "readOpt": 99.31,
+                "writeOpt": 99.84,
+                "cpuUtilization": 80.4
+            },
+            {
+                "timestamp": 1722914295000,
+                "networkIn": 75.78,
+                "networkOut": 17.08,
+                "readOpt": 95.93,
+                "writeOpt": 91.03,
+                "cpuUtilization": 71.05
+            },
+            {
+                "timestamp": 1722914296000,
+                "networkIn": 86.55,
+                "networkOut": 35.58,
+                "readOpt": 56.77,
+                "writeOpt": 58.03,
+                "cpuUtilization": 13.97
+            },
+            {
+                "timestamp": 1722914297000,
+                "networkIn": 17.29,
+                "networkOut": 36.11,
+                "readOpt": 51.01,
+                "writeOpt": 42.1,
+                "cpuUtilization": 60.29
+            }
+        ]
+    }
+]
