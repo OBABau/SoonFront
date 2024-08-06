@@ -5,6 +5,7 @@ export const init = () => {
     // initMap();
     fetchAndHandleRoutes();
     setupFormListener();
+    mapa()
 }
 
 const fetchAndHandleRoutes = () => {
@@ -19,10 +20,27 @@ const fetchAndHandleRoutes = () => {
             const routeList = document.getElementById('routeList');
             routeList.innerHTML = '';
             data.routess.forEach(route => {
-                const routeItem = document.createElement('div');
-                routeItem.className = 'w-4/5 py-2 px-4 cursor-pointer rounded-lg shadow hover:bg-gray-300';
+                const routeItem = document.createElement('button');
+                routeItem.className = 'btn w-4/5 py-2 px-4 cursor-pointer rounded-lg shadow hover:bg-gray-300';
                 routeItem.textContent = route.name;
+                routeItem.onclick = function() {
+                    fetch(`https://soon-api.azurewebsites.net/api/Routes/`+route.code)
+                        .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok ' + response.statusText);
+                        }
+                        return response.json();
+                        })
+                        .then(data => {
+                        const mapa = document.getElementById('mapa');
+                        mapa.innerHTML = route.map;
+                        })
+                        .catch(error => {
+                        console.error('Hubo un problema con la solicitud fetch:', error);
+                        });
+                }
                 routeList.appendChild(routeItem);
+
             });
         })
         .catch(error => {
@@ -30,18 +48,58 @@ const fetchAndHandleRoutes = () => {
         });
 }
 
+const mapa = () => {
+// Selecciona todos los botones con la clase específica
+const buttons = document.querySelectorAll('button');
+
+// Función para manejar el clic en un botón
+function handleClick(event) {
+  // Obtiene el id del botón clickeado
+  const buttonId = event.target.id;
+
+  // Realiza la solicitud fetch incluyendo el id en la URL
+  fetch(`https://soon-api.azurewebsites.net/api/Routes/${buttonId}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Datos recibidos:', data);
+    })
+    .catch(error => {
+      console.error('Hubo un problema con la solicitud fetch:', error);
+    });
+}
+
+// Añade un event listener a cada botón
+buttons.forEach(button => {
+  button.addEventListener('click', handleClick);
+});
+
+
+}
+
+
 const setupFormListener = () => {
     const form = document.getElementById('dialog');
     form.addEventListener('submit', function (event) {
         event.preventDefault();
         const name = document.getElementById('name').value.trim();
+        const map = document.getElementById('map').value.trim();
         const message = document.getElementById('message_response');
         if (!name) {
             message.textContent = 'Por favor, complete todos los campos.';
             return;
         }
+
+        
         const data = new URLSearchParams();
         data.append('name', name);
+        data.append('status', 'true');
+        data.append('map', map);
+        
         fetch('https://soon-api.azurewebsites.net/api/Routes', {
             method: 'POST',
             headers: {

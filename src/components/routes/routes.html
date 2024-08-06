@@ -6,29 +6,26 @@
 <!-- <div class="flex items-center justify-center w-full h-12">
     <h1 class="text-md font-semibold w-4/5"> > Rutas</h1>
 </div> -->
-<section class="w-full h-full flex flex-row">
-    <div class="flex flex-col items-center justify-center w-1/2 h-full">
-        <div class="flex flex-col items-center justify-center shadow-all-sides h-5/6 w-10/12  rounded-lg">
+<section class="w-full h-full flex flex-row overflow-hidden">
+    <div class="flex flex-col items-center justify-center w-1/2 h-full overflow-hidden">
+        <div class="flex flex-col items-center justify-center shadow-all-sides h-5/6 w-10/12  rounded-lg overflow-auto">
             <h2
                 class="h-[10%] shadow-all-sides w-full rounded-t-lg flex items-center justify-center bg-deepBlue text-white font-semibold">
                 Mapa</h2>
-            <div id="mapa" class="h-[90%]">
-
-            </div>
-            <!-- <iframe id="mapa"
-                src="https://www.google.com/maps/embed?pb=!1m44!1m12!1m3!1d53878.82816927895!2d-116.91627411244048!3d32.434509944699684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m29!3e0!4m3!3m2!1d32.460949!2d-116.82541499999999!4m5!1s0x80d93e7f591a76eb%3A0xbde285916990b185!2sPlaza%20Sendero%20Tijuana!3m2!1d32.4547119!2d-116.83783609999999!4m5!1s0x80d93d9fe401ce4f%3A0xe5ec2583bce6b69e!2sInstituto%20de%20Movilidad%20Sustentable%2C%20El%20Florido%2C%20Tijuana%2C%20Baja%20California!3m2!1d32.4475329!2d-116.8503415!4m5!1s0x80d93bf949939b51%3A0x33ae4fd52089d460!2sPuerta%20plata%2C%20Condominio%20Agata%2C%20Tijuana%2C%20Baja%20California!3m2!1d32.4105104!2d-116.9149034!4m5!1s0x80d93e743f2e3bd7%3A0xbf19e069ae61d678!2sUniversidad%20Tecnol%C3%B3gica%20de%20Tijuana%2C%20El%20Refugio%2C%20Quintas%20Campestre%2C%20Redondo%2C%20Baja%20California!3m2!1d32.460949!2d-116.82541499999999!5e0!3m2!1ses-419!2smx!4v1721898695329!5m2!1ses-419!2smx"
-                class="w-full h-full" style="border:0;" allowfullscreen="true" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                <div id="mapa" class="h-[90%] overflow-hidden">
+                
+               </div>
+            
         </div>
     </div>
     <div class="flex flex-col items-center justify-center w-1/2 h-full">
-        <div class="flex flex-col gap-2 items-center justify-center shadow-all-sides h-5/6 w-10/12  rounded-lg">
+        <div class="flex flex-col gap-2 items-center justify-center shadow-all-sides h-5/6 w-10/12  rounded-lg overflow-y-auto">
             <span
                 class="h-[10%] shadow-all-sides w-full rounded-t-lg flex items-center justify-center bg-deepBlue text-white font-semibold">Sección
                 de rutas</span>
             <!-- Open the modal using ID.showModal() method -->
              <aside class="w-full h-[90%]">
-                 <button class="btn btn-sm btn-success" onclick="my_modal_1.showModal()">+ Agregar una nueva
+                 <button class="btn btn-sm btn-success " onclick="my_modal_1.showModal()">+ Agregar una nueva
                      ruta</button>
                  <div class="flex w-4/5 flex-col">
                      <div class="divider divider-success text-green-700">Rutas</div>
@@ -60,6 +57,16 @@
                         Nombre de ruta
                     </label>
                     <input type="text" name="name" id="name" placeholder=" "
+                        class="peer block w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-transparent focus:border-gray-400 focus:outline-none"
+                        autocomplete="off" required />
+                </div>
+
+                <div class="relative mt-6">
+                    <label for="map"
+                        class="absolute top-0 left-3 text-gray-300 text-sm transition-transform duration-300 transform -translate-y-4 scale-75 origin-left peer-placeholder-shown:translate-y-1/2 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-gray-500 peer-focus:translate-y-[-0.75rem] peer-focus:text-gray-100">
+                        Mapa de ruta
+                    </label>
+                    <input type="text" name="map" id="map" placeholder=" "
                         class="peer block w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-transparent focus:border-gray-400 focus:outline-none"
                         autocomplete="off" required />
                 </div>
