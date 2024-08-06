@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cmyk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Soon</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="../src/dist/output.css" rel="stylesheet">
+    <style>
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .navbar {
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar bg-base-100 shadow-lg">
+        <div class="navbar-start">
+            <a class="btn btn-ghost text-xl" href="../index.html">Soon</a>
+        </div>
+        <div class="navbar-end">
+            <button class="btn btn-ghost">
+                <a href="./src/pages/SignIn.html"><i class="fas fa-sign-in-alt"></i> Inicia sesión</a>
+            </button>
+            <button class="btn btn-ghost">
+                <a href="./src/pages/SignUp.html"><i class="fas fa-user-plus"></i> Regístrate</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="hero min-h-screen bg-base-200">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+                <h1 class="mb-5 text-5xl font-bold">Acerca de Soon</h1>
+                <p class="mb-5">Soon es una aplicación innovadora diseñada para mejorar la gestión del transporte público, proporcionando a los usuarios información en tiempo real sobre la ubicación y horarios de los vehículos.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="mb-10">
+            <h2 class="section-title">Descripción de la Aplicación</h2>
+            <p>Soon es una aplicación innovadora diseñada para mejorar la gestión del transporte público, proporcionando a los usuarios información en tiempo real sobre la ubicación y horarios de los vehículos. Con Soon, los usuarios pueden:</p>
+            <ul class="list-disc ml-5">
+                <li>Consultar la ubicación actual de los vehículos de transporte público.</li>
+                <li>Recibir notificaciones sobre llegadas y salidas.</li>
+                <li>Planificar rutas eficientes utilizando datos actualizados.</li>
+                <li>Reportar incidencias y recibir soporte en tiempo real.</li>
+            </ul>
+        </div>
+
+        <div class="mb-10">
+            <h2 class="section-title">Historia y Misión</h2>
+            <h3 class="text-lg font-semibold">Historia:</h3>
+            <p>Soon nació de la visión de Axis Development de transformar la experiencia del transporte público. Desde su fundación, Axis Development ha trabajado arduamente para crear soluciones de software que mejoren la vida cotidiana de las personas. Soon es el resultado de años de investigación y desarrollo dedicados a entender las necesidades de los usuarios del transporte público.</p>
+
+            <h3 class="text-lg font-semibold mt-4">Misión:</h3>
+            <p>Nuestra misión es proporcionar una herramienta que facilite y optimice el uso del transporte público, reduciendo tiempos de espera y mejorando la eficiencia del servicio. Nos esforzamos por crear una experiencia de transporte más cómoda y accesible para todos.</p>
+
+            <h3 class="text-lg font-semibold mt-4">Visión:</h3>
+            <p>Ser la plataforma líder en la gestión del transporte público, contribuyendo a la creación de ciudades más inteligentes y sostenibles.</p>
+        </div>
+
+        <div class="mb-10">
+            <h2 class="section-title">Equipo</h2>
+            <p>Nuestro equipo está compuesto por profesionales apasionados y dedicados que trabajan incansablemente para hacer de Soon una aplicación de clase mundial.</p>
+            <ul class="list-disc ml-5">
+                <li>Luis Islas: Fundador y CEO. Lidera la visión y la dirección estratégica del proyecto.</li>
+                <li>Natalia Islas: Jefa de Desarrollo. Responsable del diseño y desarrollo de las funcionalidades de la aplicación.</li>
+                <li>Beatriz Islas: Gerente de Producto. Encargada de coordinar las necesidades del mercado con las capacidades del equipo de desarrollo.</li>
+                <li>Juan Pérez: Ingeniero de Software. Especialista en backend y bases de datos.</li>
+                <li>María López: Diseñadora UI/UX. Encargada del diseño de la interfaz y la experiencia del usuario.</li>
+            </ul>
+        </div>
+
+        <div class="mb-10">
+            <h2 class="section-title">Versiones de la Aplicación</h2>
+            <h3 class="text-lg font-semibold">Versión Actual: Soon 1.0.0</h3>
+            <ul class="list-disc ml-5">
+                <li>Implementación de funciones básicas de seguimiento en tiempo real.</li>
+                <li>Notificaciones de llegada y salida.</li>
+                <li>Planificación de rutas.</li>
+                <li>Reporte de incidencias.</li>
+            </ul>
+            <h3 class="text-lg font-semibold mt-4">Historial de Versiones:</h3>
+            <ul class="list-disc ml-5">
+                <li>0.9.0: Versión Beta pública.</li>
+                <li>0.8.0: Pruebas internas de seguimiento en tiempo real.</li>
+                <li>0.7.0: Desarrollo inicial de la interfaz de usuario.</li>
+            </ul>
+        </div>
+
+        <div class="mb-10">
+            <h2 class="section-title">Licencias y Créditos</h2>
+            <p>Soon utiliza una variedad de bibliotecas de software de terceros para proporcionar su funcionalidad:</p>
+            <ul class="list-disc ml-5">
+                <li>React Native: Para la construcción de la aplicación móvil.</li>
+                <li>Expo Router: Para la gestión de la navegación.</li>
+                <li>Formik y Yup: Para la validación y gestión de formularios.</li>
+                <li>Mapbox: Para los servicios de mapas y geolocalización.</li>
+            </ul>
+            <p>Agradecemos a todos los desarrolladores y proyectos de código abierto que han contribuido a la creación de Soon.</p>
+        </div>
+
+        <div class="mb-10">
+            <h2 class="section-title">Contacto y Soporte</h2>
+            <p>Para soporte y retroalimentación, puedes contactarnos en:</p>
+            <ul class="list-disc ml-5">
+                <li><i class="fas fa-envelope"></i> Correo Electrónico: <a href="mailto:axisdev.tft@gmail.com" class="link link-hover">axisdev.tft@gmail.com</a></li>
+                <li><i class="fas fa-phone"></i> Teléfono: +52 (664) 756-9880</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -6,39 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soon</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="./src/dist/output.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="navbar-center">
+    <div class="navbar bg-base-100 shadow-lg">
+        <div class="navbar-start">
             <a class="btn btn-ghost text-xl" href="./">Soon</a>
         </div>
         <div class="navbar-end">
             <button class="btn btn-ghost">
-                <a href="./src/pages/SignIn.html">Inicia sesion</a>
+                <a href="./src/pages/SignIn.html"><i class="fas fa-sign-in-alt"></i> Inicia sesión</a>
             </button>
-            <button class="btn btn-ghost ">
-                <div class="indicator">
-                    <a href="./src/pages/SignUp.html">Registrate</a>
-                </div>
+            <button class="btn btn-ghost">
+                <a href="./src/pages/SignUp.html"><i class="fas fa-user-plus"></i> Regístrate</a>
             </button>
         </div>
     </div>
-    <div class="hero min-h-screen"
-        style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
+
+    <div class="hero min-h-screen" style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
         <div class="hero-overlay bg-opacity-60"></div>
-        <div class="hero-content text-neutral-content text-center">
+        <div class="hero-content text-center text-neutral-content">
             <div class="max-w-md">
-                <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                <h1 class="mb-5 text-5xl font-bold">Bienvenido a Soon</h1>
                 <p class="mb-5">
-                    Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                    quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    Facilita tu transporte público con Soon. Planifica, organiza y optimiza tu tiempo de viaje.
                 </p>
-                <button class="btn btn-primary">Get Started</button>
+                <button class="btn btn-primary"><i class="fas fa-play-circle"></i> Comienza ahora</button>
             </div>
         </div>
     </div>
+
+    <div class="p-10 bg-base-200 text-base-content">
+        <div class="text-center mb-10">
+            <h2 class="text-4xl font-bold">Características principales</h2>
+            <p class="text-xl">Descubre todo lo que Soon tiene para ofrecerte.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <i class="fas fa-bus fa-3x"></i>
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Transporte eficiente</h2>
+                    <p>Organiza tus viajes y ahorra tiempo con nuestras rutas optimizadas.</p>
+                </div>
+            </div>
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <i class="fas fa-calendar-alt fa-3x"></i>
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Planificación de horarios</h2>
+                    <p>Consulta los horarios de transporte en tiempo real y planifica tu día.</p>
+                </div>
+            </div>
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <i class="fas fa-map-marker-alt fa-3x"></i>
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Seguimiento en vivo</h2>
+                    <p>Sigue el trayecto de tu transporte en vivo y recibe notificaciones.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer p-10 bg-base-200 text-base-content">
+        <div>
+            <span class="footer-title">Soon</span>
+            <a href="LandingPage/acercaDe.html" class="link link-hover">Acerca de</a>
+        </div>
+        <div>
+            <span class="footer-title">Legal</span>
+            <a href="LandingPage/terminosUso.html" class="link link-hover">Términos de uso</a>
+            <a href="LandingPage/politicaPriv.html" class="link link-hover">Política de privacidad</a>
+        </div>
+
+        <div>
+            <span class="footer-title">Redes Sociales</span>
+            <div class="grid grid-flow-col">
+                <a href="https://www.facebook.com/profile.php?id=61556283670646" target="_blank" rel="noopener noreferrer" class="mx-3">
+                    <i class="fab fa-facebook-f fa-2x"></i>
+                </a>
+                <a href="https://x.com/AxisDeveloper_s" target="_blank" rel="noopener noreferrer" class="mx-3">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+            </div>
+        </div>
+              
+    </footer>
 </body>
 
 </html>
